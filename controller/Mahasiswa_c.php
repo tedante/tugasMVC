@@ -25,7 +25,9 @@ class Mahasiswa_c {
 			break;
 
 			default: 
+				include_once 'view/layout/header.php';
 				include 'view/index_v.php';
+				include_once 'view/layout/footer.php';
 		}
 	}
 }

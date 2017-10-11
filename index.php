@@ -1,3 +1,6 @@
 <?php
-include 'controller/Mahasiswa_c.php';
-$controller = new Mahasiswa_c();
+include 'view/layout/header.php';
+include 'controller/route_c.php';
+$route = new Route();
+include 'view/layout/footer.php';
+?>
