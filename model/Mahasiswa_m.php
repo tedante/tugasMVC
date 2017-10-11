@@ -6,11 +6,11 @@ class Mahasiswa_m {
 	
 	function __construct() {
 		$this->conn = mysqli_connect("localhost", "root", "");
-		$this->db = mysqli_select_db($this->conn, "test");
+		$this->db = mysqli_select_db($this->conn, "db_mvc");
 	}
 	
 	function getAll() {
-		$sql = "SELECT * FROM t_mhs";
+		$sql = "SELECT * FROM tb_mahasiswa";
 		$query = mysqli_query($this->conn, $sql);
 		
 		//$data = mysqli_fetch_assoc($query);
@@ -22,14 +22,14 @@ class Mahasiswa_m {
 	}
 	
 	function getByNim($arg_nim) {
-		$sql = "SELECT * FROM t_mhs where nim = '$arg_nim'";
+		$sql = "SELECT * FROM tb_mahasiswa where nim = '$arg_nim'";
 		$query = mysqli_query($this->conn, $sql);
 		$wadah = mysqli_fetch_assoc($query);
 		return $wadah;	
 	}
 	
 	function insert($arg_nim, $arg_nama, $arg_kelas) {
-		$sql = "INSERT INTO t_mhs (nim, nama, kelas) values 
+		$sql = "INSERT INTO tb_mahasiswa (nim, nama, kelas) values 
 				('$arg_nim', '$arg_nama', '$arg_kelas')";
 		$query = mysqli_query($this->conn, $sql);
 		return $query; 

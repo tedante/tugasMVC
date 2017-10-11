@@ -19,15 +19,26 @@ class Mahasiswa_c {
 
 		switch($arg_menu) {
 			case "table":
-				include_once 'view/layout/header.php';
-				include_once 'view/index_v.php';
-				include_once 'view/layout/footer.php';
+				$data = $this->model->getAll();
+				include_once 'view/mahasiswa_table_v.php';
+			break;
+			case "list":
+				include_once 'view/mahasiswa_list_v.php';
+			break;
+			case "insert":
+				include_once 'view/mahasiswa_insert_v.php';
+			break;
+			case "insert_proses":
+				$nim = $_POST['nim'];
+				$nama = $_POST['nama'];
+				$kelas = $_POST['kelas'];
+
+				$this->model->insert($nim,$nama,$kelas);
+				header("location:index.php?controler=mahasiswa&arg_menu=table");
 			break;
 
 			default: 
-				include_once 'view/layout/header.php';
 				include 'view/index_v.php';
-				include_once 'view/layout/footer.php';
 		}
 	}
 }

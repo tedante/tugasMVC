@@ -36,8 +36,6 @@
 
 	</head>
 	<body>
-		<div id="fh5co-wrapper">
-		<div id="fh5co-page">
 		<div id="fh5co-header">
 			<header id="fh5co-header-section">
 				<div class="container">
@@ -48,14 +46,14 @@
 						<nav id="fh5co-menu-wrap" role="navigation">
 							<ul class="sf-menu" id="fh5co-primary-menu">
 								<li class="active">
-									<a href="index.html">Home</a>
+									<a href="index.php">Home</a>
 								</li>
 								<li>
 									<a href="portfolio.html" class="fh5co-sub-ddown">Mahasiswa</a>
 									<ul class="fh5co-sub-menu">
-										<li><a href="index.php?controller=mahasiswa">Table</a></li>
-										<li><a href="#">List</a></li>
-										<li><a href="#" target="_blank">Insert</a></li>
+										<li><a href="index.php?controller=mahasiswa&arg_menu=table">Table</a></li>
+										<li><a href="index.php?controller=mahasiswa&arg_menu=list">List</a></li>
+										<li><a href="index.php?controller=mahasiswa&arg_menu=insert">Insert</a></li>
 									</ul>
 								</li>
 								<li>
@@ -79,9 +77,9 @@
 					</div>
 				</div>
 			</header>
-			
 		</div>
 		
 
 		<div class="fh5co-hero">
-			<div class="fh5co-overlay"></div>
+			<div class="fh5co-overlay">
+				<div class="container" style="padding:100px 0 100px 0;">

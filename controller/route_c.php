@@ -7,27 +7,24 @@ class Route {
 	
 	function __construct()
 	{
-
+		$this->index();
 	}
 
 	function index() {
-		if (isset($_GET['arg_menu'])){
-			$arg_menu=$_GET['arg_menu'];
+		if (isset($_GET['controller'])){
+			$controller=$_GET['controller'];
 		} else {
-			$arg_menu="";
+			$controller="";
 		}
 
-		switch ($arg_menu) {
+		switch ($controller) {
 			case 'mahasiswa':
-				// $data = $this->mymodel->getAll();
-				// include_once ("view_mhs_tables.php");
-			
 				include_once("view/index_mahasiswa_v.php");
 				break;
 			
 			default:
 				// $data = $this->mymodel->getAll();
-				include_once("view/index_mahasiswa_v.php");
+				include_once("view/index_v.php");
 				break;
 		}
 	}
